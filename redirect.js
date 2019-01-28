@@ -1,6 +1,9 @@
 checkUrl(window.location.href);
 
-function checkUrl(fbUrl) {
+function checkUrl(url) {
+	if (!url.includes("facebook.com")) {
+		return 
+	}
 
 	let accepted = [
 		"/events",
@@ -10,11 +13,10 @@ function checkUrl(fbUrl) {
 	];
 	let block = true;
 	accepted.forEach(a => {
-		if (fbUrl.includes(a))
+		if (url.includes(a))
 			block = false;
 	});
 	if (block) {
 		window.location = "http://fbredirect.github.io/";
 	}
-		
 }

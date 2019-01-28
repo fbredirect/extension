@@ -3,19 +3,18 @@
   "name": "Facebook Redirect",
   "version": "1.0",
 
-  "description": "Reduces Facebook to its useful features",
+  "description": "A simpler Facebook, with less distractions",
+  "icons" : {
+    "16": "icon/16.png",
+    "48": "icon/48.png",
+    "128": "icon/128.png"
+  },
 
   "content_scripts": [
   		{
-  			"matches": ["*://www.facebook.com/*"],
+  			"matches": ["*://*/*"],
   			"js": ["redirect.js"],
         "run_at": "document_start"
-      },
-      {
-  			"matches": ["*://www.facebook.com/*"],
-  			"js": ["redirect.js"],
-        "run_at": "document_idle"
-  		}
+      }
   ]
-
 }
